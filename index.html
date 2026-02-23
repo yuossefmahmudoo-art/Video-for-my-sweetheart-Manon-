@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a0a14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>💕 إلى منه - قصة حبنا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- === Loading Screen === -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-hearts">
+                <span>💕</span>
+                <span>💖</span>
+                <span>💕</span>
+            </div>
+            <h2 class="loading-title">قصة حبنا</h2>
+            <p class="loading-subtitle">جاري تحضير أجمل اللحظات...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-tip">🎧 يُفضل استخدام السماعات</p>
+        </div>
+    </div>
+
+    <!-- === Background Music (Auto Play) === -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://files.catbox.moe/uennxa.opus" type="audio/opus">
+    </audio>
+
+    <!-- === Music Indicator === -->
+    <div class="music-indicator" id="musicIndicator">
+        <div class="music-bars">
+            <span></span><span></span><span></span><span></span>
+        </div>
+        <span class="music-text">🎵</span>
+    </div>
+
+    <!-- === Progress Bar === -->
+    <div class="progress-container">
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+            <div class="progress-glow" id="progressGlow"></div>
+        </div>
+        <span class="progress-text" id="progressText">1/8</span>
+    </div>
+
+    <!-- === Controls === -->
+    <div class="controls">
+        <button class="ctrl-btn" id="playPauseBtn" title="تشغيل/إيقاف">
+            <span class="btn-icon">⏸</span>
+        </button>
+        <button class="ctrl-btn" id="muteBtn" title="الصوت">
+            <span class="btn-icon">🔊</span>
+        </button>
+        <button class="ctrl-btn" id="fullscreenBtn" title="ملء الشاشة">
+            <span class="btn-icon">⛶</span>
+        </button>
+    </div>
+
+    <!-- === Navigation === -->
+    <nav class="scene-nav">
+        <div class="nav-line"></div>
+        <button class="nav-dot active" data-scene="0"><span></span></button>
+        <button class="nav-dot" data-scene="1"><span></span></button>
+        <button class="nav-dot" data-scene="2"><span></span></button>
+        <button class="nav-dot" data-scene="3"><span></span></button>
+        <button class="nav-dot" data-scene="4"><span></span></button>
+        <button class="nav-dot" data-scene="5"><span></span></button>
+        <button class="nav-dot" data-scene="6"><span></span></button>
+        <button class="nav-dot" data-scene="7"><span></span></button>
+    </nav>
+
+    <!-- === Cinema Bars === -->
+    <div class="cinema-bar top"></div>
+    <div class="cinema-bar bottom"></div>
+
+    <!-- === Film Grain Effect === -->
+    <div class="film-grain"></div>
+
+    <!-- ==================== SCENES ==================== -->
+    <main class="scenes-container" id="scenesContainer">
+
+        <!-- ========== SCENE 1: Cinematic Opening ========== -->
+        <section class="scene active" data-index="0">
+            <div class="scene-bg parallax" data-speed="0.3">
+                <img src="https://i.postimg.cc/90Hj5f3J/01K39A2MG2C6PGM7YQS3RX6CGN.jpg" alt="" class="bg-image ken-burns">
+            </div>
+            <div class="scene-overlay cinematic"></div>
+            
+            <div class="scene-content">
+                <div class="particles" id="particles1"></div>
+                
+                <div class="opening-badge">
+                    <span>🎬</span>
+                    <span>A Love Story</span>
+                </div>
+                
+                <div class="sparkle-container">
+                    <span class="sparkle">✨</span>
+                    <span class="sparkle">💫</span>
+                    <span class="sparkle">✨</span>
+                </div>
+                
+                <h1 class="main-title">
+                    <span class="title-word">إلى</span>
+                    <span class="title-word">أجمل</span>
+                    <span class="title-word accent">صدفة</span>
+                    <span class="title-word">في</span>
+                    <span class="title-word">حياتي</span>
+                </h1>
+                
+                <div class="title-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-heart">💕</div>
+                    <div class="divider-line"></div>
+                </div>
+                
+                <p class="main-subtitle">قصة حبنا في ثمانية مشاهد</p>
+                
+                <div class="hero-name">
+                    <span class="name-decoration">♥</span>
+                    <span class="name-text">منه</span>
+                    <span class="name-decoration">♥</span>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="mouse-icon">
+                        <div class="mouse-wheel"></div>
+                    </div>
+                    <p>اسحب للأعلى لتبدأ الرحلة</p>
+                    <div class="scroll-arrows">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SCENE 2: Love Counter ========== -->
+        <section class="scene" data-index="1">
+            <div class="scene-bg parallax" data-speed="0.2">
+                <img src="https://i.postimg.cc/C5CpFVYP/01K399MW4936BB4TJPP53PHVSG.jpg" alt="" class="bg-image">
+            </div>
+            <div class="scene-overlay gradient"></div>
+            
+            <div class="scene-content">
+                <div class="counter-section">
+                    <h2 class="section-title">
+                        <span class="title-icon">⏱️</span>
+                        <span>عداد حبنا</span>
+                    </h2>
+                    
+                    <p class="counter-subtitle">من أول يوم قابلتك فيه...</p>
+                    
+                    <div class="love-counter" id="loveCounter">
+                        <div class="counter-item">
+                            <span class="counter-number" id="counterDays">365</span>
+                            <span class="counter-label">يوم</span>
+                        </div>
+                        <div class="counter-separator">:</div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="counterHours">00</span>
+                            <span class="counter-label">ساعة</span>
+                        </div>
+                        <div class="counter-separator">:</div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="counterMinutes">00</span>
+                            <span class="counter-label">دقيقة</span>
+                        </div>
+                        <div class="counter-separator">:</div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="counterSeconds">00</span>
+                            <span class="counter-label">ثانية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="anniversary-badge">
+                        🎉 كملنا سنة مع بعض! 🎉
+                    </div>
+                    
+                    <p class="counter-message">وكل ثانية بحبك أكتر 💕</p>
+                    
+                    <div class="milestone-badges">
+                        <span class="badge">💑 مخطوبين</span>
+                        <span class="badge">💕 سنة حب</span>
+                        <span class="badge">💍 قريباً</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SCENE 3: Word by Word ========== -->
+        <section class="scene" data-index="2">
+            <div class="scene-bg parallax" data-speed="0.25">
+                <img src="https://i.postimg.cc/VLBzwXkF/01K399D6KJCXSGPV7TZTHSHV8T.jpg" alt="" class="bg-image">
+            </div>
+            <div class="scene-overlay dark"></div>
+            
+            <div class="scene-content">
+                <div class="quote-container">
+                    <div class="quote-mark open">"</div>
+                    <div class="words-display" id="wordsContainer"></div>
+                    <div class="quote-mark close">"</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SCENE 4: Reasons I Love You ========== -->
+        <section class="scene" data-index="3">
+            <div class="scene-bg parallax" data-speed="0.2">
+                <img src="https://i.postimg.cc/4yvRJTsR/01K111R8AHJS5G8S9ZY6V23MPX.jpg" alt="" class="bg-image">
+            </div>
+            <div class="scene-overlay gradient"></div>
+            
+            <div class="scene-content">
+                <h2 class="section-title">
+                    <span class="title-icon">💝</span>
+                    <span>ليه بحبك يا منه؟</span>
+                </h2>
+                
+                <div class="reasons-container" id="reasonsContainer">
+                    <div class="reason-card" data-delay="0">
+                        <span class="reason-icon">😊</span>
+                        <p>ضحكتك اللي بتنور الدنيا</p>
+                    </div>
+                    <div class="reason-card" data-delay="1">
+                        <span class="reason-icon">💪</span>
+                        <p>قوتك وصبرك معايا</p>
+                    </div>
+                    <div class="reason-card" data-delay="2">
+                        <span class="reason-icon">🥰</span>
+                        <p>طيبة قلبك</p>
+                    </div>
+                    <div class="reason-card" data-delay="3">
+                        <span class="reason-icon">🌟</span>
+                        <p>إنك بتفهميني من غير كلام</p>
+                    </div>
+                    <div class="reason-card" data-delay="4">
+                        <span class="reason-icon">🏠</span>
+                        <p>إنك بيتي وأماني</p>
+                    </div>
+                    <div class="reason-card" data-delay="5">
+                        <span class="reason-icon">♾️</span>
+                        <p>لأنك إنتِ... منه</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SCENE 5: Photo Gallery ========== -->
+        <section class="scene" data-index="4">
+            <div class="scene-bg scene-bg-gradient"></div>
+            <div class="scene-overlay light"></div>
+            
+            <div class="scene-content">
+                <h2 class="section-title">
+                    <span class="title-icon">📸</span>
+                    <span>ذكرياتنا الحلوة</span>
+                </h2>
+                
+                <div class="gallery-3d" id="gallery3d">
+                    <div class="gallery-track" id="galleryTrack">
+                        <div class="gallery-card active">
+                            <div class="card-inner">
+                                <div class="card-image">
+                                    <img src="https://i.postimg.cc/90Hj5f3J/01K39A2MG2C6PGM7YQS3RX6CGN.jpg" alt="">
+                                </div>
+                                <div class="card-caption">
+                                    <p>💕 أجمل ابتسامة</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card">
+                            <div class="card-inner">
+                                <div class="card-image">
+                                    <img src="https://i.postimg.cc/C5CpFVYP/01K399MW4936BB4TJPP53PHVSG.jpg" alt="">
+                                </div>
+                                <div class="card-caption">
+                                    <p>✨ عيون فيها حب</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card">
+                            <div class="card-inner">
+                                <div class="card-image">
+                                    <img src="https://i.postimg.cc/VLBzwXkF/01K399D6KJCXSGPV7TZTHSHV8T.jpg" alt="">
+                                </div>
+                                <div class="card-caption">
+                                    <p>🌹 لحظة جميلة</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-card">
+                            <div class="card-inner">
+                                <div class="card-image">
+                                    <img src="https://i.postimg.cc/4yvRJTsR/01K111R8AHJS5G8S9ZY6V23MPX.jpg" alt="">
+                                </div>
+                                <div class="card-caption">
+                                    <p>❤️ حبيبتي منه</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-nav">
+                    <button class="gallery-btn prev" id="galleryPrev">❮</button>
+                    <div class="gallery-dots" id="galleryDots">
+                        <span class="g-dot active"></span>
+                        <span class="g-dot"></span>
+                        <span class="g-dot"></span>
+                        <span class="g-dot"></span>
+                    </div>
+                    <button class="gallery-btn next" id="galleryNext">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SCENE 6: Our Song ========== -->
+        <section class="scene" data-index="5">
+            <div class="scene-bg parallax" data-speed="0.15">
+                <img src="https://i.postimg.cc/VLBzwXkF/01K399D6KJCXSGPV7TZTHSHV8T.jpg" alt="" class="bg-image blur-bg">
+            </div>
+            <div class="scene-overlay dark"></div>
+            
+            <div class="scene-content">
+                <div class="music-scene">
+                    <div class="vinyl-wrapper">
+                        <div class="vinyl-record playing" id="vinylRecord">
+                            <div class="vinyl-grooves"></div>
+                            <div class="vinyl-label">
+                                <img src="https://i.postimg.cc/C5CpFVYP/01K399MW4936BB4TJPP53PHVSG.jpg" alt="" class="label-image">
+                            </div>
+                            <div class="vinyl-shine"></div>
+                        </div>
+                        <div class="vinyl-reflection"></div>
+                    </div>
+                    
+                    <div class="music-info">
+                        <span class="now-playing playing">🎵 Now Playing</span>
+                        <h2 class="song-title">أغنيتنا الخاصة</h2>
+                        <p class="song-artist">أغنية منه المفضلة 💕</p>
+                    </div>
+                    
+                    <div class="audio-visualizer playing" id="audioVisualizer">
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                        <div class="viz-bar"></div>
+                    </div>
+                    
+                    <p class="music-quote">"كل أغنية حلوة بتفكرني بيكِ يا منه"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SCENE 7: Love Letter ========== -->
+        <section class="scene" data-index="6">
+            <div class="scene-bg">
+                <div class="stars-bg"></div>
+                <div class="shooting-stars">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="scene-overlay"></div>
+            
+            <div class="scene-content">
+                <div class="letter-wrapper">
+                    <div class="envelope" id="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <span>💌</span>
+                        </div>
+                    </div>
+                    
+                    <div class="letter-paper" id="letterPaper">
+                        <div class="paper-decoration top">✨ 💕 ✨</div>
+                        
+                        <div class="letter-header">
+                            <span class="letter-date">إلى حبيبتي...</span>
+                            <span class="letter-icon">💌</span>
+                        </div>
+                        
+                        <h3 class="letter-greeting">منه يا أجمل حاجة في حياتي...</h3>
+                        
+                        <div class="letter-content">
+                            <p class="typing-text" id="typingText"></p>
+                            <span class="typing-cursor">|</span>
+                        </div>
+                        
+                        <div class="letter-footer">
+                            <p>خطيبك المحب للأبد</p>
+                            <span class="signature-heart">💕</span>
+                        </div>
+                        
+                        <div class="paper-decoration bottom">💕</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SCENE 8: Grand Finale ========== -->
+        <section class="scene" data-index="7">
+            <div class="scene-bg parallax" data-speed="0.1">
+                <img src="https://i.postimg.cc/90Hj5f3J/01K39A2MG2C6PGM7YQS3RX6CGN.jpg" alt="" class="bg-image">
+            </div>
+            <div class="scene-overlay romantic"></div>
+            
+            <div class="scene-content finale-content">
+                <div class="confetti-container" id="confettiContainer"></div>
+                <div class="hearts-rain" id="heartsRain"></div>
+                
+                <div class="grand-heart">
+                    <svg class="heart-svg" viewBox="0 0 100 100">
+                        <defs>
+                            <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff6b9d"/>
+                                <stop offset="50%" style="stop-color:#ff4081"/>
+                                <stop offset="100%" style="stop-color:#c44569"/>
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <path class="heart-path" fill="url(#heartGradient)" filter="url(#glow)"
+                            d="M50,88 C20,60 0,40 15,25 C30,10 50,20 50,35 C50,20 70,10 85,25 C100,40 80,60 50,88 Z"/>
+                    </svg>
+                    <div class="heart-pulse-ring"></div>
+                    <div class="heart-pulse-ring delay-1"></div>
+                    <div class="heart-pulse-ring delay-2"></div>
+                </div>
+                
+                <!-- اسم منه -->
+                <h1 class="finale-name">
+                    <span class="char">مـــ</span>
+                    <span class="char">نـــ</span>
+                    <span class="char">ه</span>
+                </h1>
+                
+                <p class="finale-subtitle">أحلى اسم في الكون كله</p>
+                
+                <div class="anniversary-celebration">
+                    🎉 سنة أولى حب 🎉
+                </div>
+                
+                <div class="finale-photo">
+                    <div class="photo-frame">
+                        <img src="https://i.postimg.cc/C5CpFVYP/01K399MW4936BB4TJPP53PHVSG.jpg" alt="منه">
+                    </div>
+                    <div class="frame-glow"></div>
+                </div>
+                
+                <div class="finale-message">
+                    <p>أنتِ مش بس حبيبتي...</p>
+                    <p>أنتِ <span class="highlight">نصي التاني</span></p>
+                    <p>أنتِ <span class="highlight">بيتي</span> و<span class="highlight">أماني</span></p>
+                </div>
+                
+                <div class="promise-section">
+                    <div class="ring-animation">
+                        <span class="ring-emoji">💍</span>
+                        <div class="ring-sparkles">
+                            <span>✨</span><span>✨</span><span>✨</span><span>✨</span>
+                        </div>
+                    </div>
+                    <p class="promise-text">وعد مني ليكِ...</p>
+                    <p class="promise-main">هفضل أحبك للأبد يا منه</p>
+                </div>
+                
+                <div class="finale-actions">
+                    <button class="action-btn primary" id="shareBtn">
+                        <span>📤</span> شاركي الفيديو
+                    </button>
+                    <button class="action-btn" id="restartBtn">
+                        <span>🔄</span> شاهد مرة أخرى
+                    </button>
+                </div>
+                
+                <div class="finale-signature">
+                    <p>صُنع بكل الحب ❤️</p>
+                    <p class="signature-date">سنة أولى من سنين كتير جاية 💕</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
